@@ -1,0 +1,16 @@
+==================================================
+         SCHEMA VALIDATION REPORT
+Generated at: 2026-06-10 00:11:01
+==================================================
+
+Table: customers -> Status: PASSED
+--------------------------------------------------
+Table: products -> Status: PASSED
+--------------------------------------------------
+Table: inventory -> Status: PASSED
+--------------------------------------------------
+Table: transactions -> Status: PASSED
+--------------------------------------------------
+
+Summary:
+All tables validated successfully. Pipeline ready for cleaning.

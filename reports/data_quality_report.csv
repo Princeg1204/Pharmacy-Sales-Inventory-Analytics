@@ -1,0 +1,15 @@
+timestamp,table,operation,metric_before,metric_after,details
+2026-06-10 00:14:59,customers,Deduplication,5200,5200,Removed 0 duplicate rows.
+2026-06-10 00:14:59,customers,Drop Corrupt Rows (>30% missing),5200,5200,Dropped 0 rows.
+2026-06-10 00:14:59,customers,Impute Missing Age,78,0,Imputed with median age: 52.0
+2026-06-10 00:14:59,customers,Impute Missing Gender,78,0,Imputed with 'Unknown'
+2026-06-10 00:14:59,products,Deduplication,160,160,Removed duplicates
+2026-06-10 00:14:59,inventory,Deduplication,160,160,Removed duplicates
+2026-06-10 00:14:59,transactions,Deduplication,52976,52793,Removed 183 duplicate rows.
+2026-06-10 00:14:59,transactions,Drop Corrupt Rows (>30% missing),52673,52673,Dropped 120 rows.
+2026-06-10 00:14:59,transactions,Impute Missing Date (Forward Fill),264,0,Forward filled transaction dates
+2026-06-10 00:14:59,transactions,Impute Missing Quantity,527,0,Imputed with median: 2.0
+2026-06-10 00:14:59,transactions,Impute Missing Unit Price,528,0,Imputed with median: 22.45
+2026-06-10 00:14:59,transactions,Outlier Treatment (quantity),692,0,Capped at 5th (1.00) and 95th (4.00) percentiles.
+2026-06-10 00:14:59,transactions,Outlier Treatment (unit_price),1423,0,Capped at 5th (5.93) and 95th (48.23) percentiles.
+2026-06-10 00:14:59,transactions,Normalize Unit Price,"[3.60, 55.43]","[0.0, 1.0]",Min-Max normalization

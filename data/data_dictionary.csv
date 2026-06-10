@@ -1,0 +1,40 @@
+Table,Column_Name,Data_Type,Description,Sample_Value
+customers,customer_id,TEXT,Unique customer identifier,CUST0001
+customers,customer_name,TEXT,Customer full name,Alice Smith
+customers,email,TEXT,Customer contact email,alice.smith@pharmmail.com
+customers,gender,TEXT,Customer gender,Female
+customers,age,INTEGER,Customer age,34
+customers,store_location,TEXT,Store location customer registered in,Downtown Pharmacy
+customers,registration_date,DATE,Date patient registered,2025-01-15
+products,product_id,TEXT,Unique product identifier,PROD001
+products,product_name,TEXT,Commercial product name,Paracetamol 500mg (Tablets)
+products,category,TEXT,Pharmaceutical category,Analgesics
+products,cost_price,REAL,Wholesale cost price per unit,1.50
+products,retail_price,REAL,Standard retail price per unit,2.50
+inventory,product_id,TEXT,Foreign key link to products,PROD001
+inventory,current_stock,INTEGER,On-hand stock units,250
+inventory,reorder_level,INTEGER,Stock count triggering purchase order,80
+inventory,safety_stock,INTEGER,Safety buffer stock quantity,20
+inventory,lead_time_days,INTEGER,Supplier lead time in days,5
+inventory,avg_daily_sales,REAL,Average daily units sold,12.50
+inventory,cost_price,REAL,Wholesale cost price per unit,1.50
+transactions,transaction_id,TEXT,Unique transaction identifier,TXN00001
+transactions,transaction_date,TIMESTAMP,POS sale date and time,2025-01-20 10:15:00
+transactions,customer_id,TEXT,Customer making purchase,CUST0001
+transactions,product_id,TEXT,Product purchased,PROD001
+transactions,quantity,INTEGER,Quantity of units sold,2
+transactions,unit_price,REAL,Sale price per unit,2.50
+transactions,store_location,TEXT,Store location transaction occurred,Downtown Pharmacy
+transactions,is_holiday,TEXT,Holiday indicator (Yes/No),No
+transactions,product_name,TEXT,POS product name,Paracetamol 500mg (Tablets)
+transactions,category,TEXT,POS product category,Analgesics
+transactions,cost_price,REAL,Wholesale unit cost price,1.50
+transactions,sales_amount,REAL,Total sales revenue (qty * price),5.0
+transactions,cogs,REAL,Cost of goods sold (qty * cost),3.0
+transactions,profit,REAL,Gross profit on sale (sales - cogs),2.0
+transactions,profit_margin,REAL,Gross profit margin percentage,40.0
+transactions,day_of_week,TEXT,Day name transaction occurred,Monday
+transactions,month,TEXT,Month name transaction occurred,January
+transactions,quarter,TEXT,Quarter designation,Q1
+transactions,week_number,INTEGER,ISO calendar week number,4
+transactions,customer_segment,TEXT,CLV RFM customer segment (VIP/Regular/At-Risk),Regular
