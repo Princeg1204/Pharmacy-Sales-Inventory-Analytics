@@ -99,58 +99,45 @@ All queries are in `sql/queries_15_analysis.sql`. Key queries include:
 ## Project Structure
 
 pharmacy-sales-inventory-analytics/
-│
-├── 📂 data/
-│   ├── 📂 raw/                      # Raw simulated CSV datasets (with nulls & outliers)
-│   │   ├── transactions.csv
-│   │   ├── products.csv
-│   │   ├── customers.csv
-│   │   └── inventory.csv
-│   └── 📂 processed/                # Cleaned, structured, and feature-engineered datasets
-│       ├── cleaned_customers.csv
-│       ├── cleaned_products.csv
-│       ├── cleaned_inventory.csv
-│       └── processed_pharmacy_data.csv
-│
-├── 📂 sql/
-│   ├── schema.sql                   # Database schema & indexes creation
-│   ├── queries_15_analysis.sql      # All 15 commented analytic SQL queries
-│   └── sample_data.sql              # Mini-dataset insert statements
-│
-├── 📂 notebooks/                    # 5 Step-by-step Jupyter analysis notebooks
-│   ├── 01_data_exploration_and_cleaning.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   ├── 03_exploratory_data_analysis.ipynb
-│   ├── 04_statistical_analysis.ipynb
-│   └── 05_business_insights_and_recommendations.ipynb
-│
-├── 📂 scripts/                      # Modular Python automation scripts
-│   ├── generate_data.py             # Data synthesizer (50K+ records)
-│   ├── data_loader.py               # Raw loader & schema validation
-│   ├── data_cleaner.py              # Cleaning pipeline (IQR outlier capping, imputation)
-│   ├── feature_engineering.py       # Metrics engine (CLV, RFM, ABC class)
-│   ├── run_queries.py               # SQLite database initializer & query runner
-│   ├── report_generator.py          # Visuals, Excel summary & PDF compiler
-│   └── generate_notebooks.py        # Automated notebook builder
-│
-├── 📂 dashboards/
-│   └── 📂 powerbi/
-│       ├── connection_guide.md      # Relationships mapping & 15+ DAX measures
-│       └── 📂 screenshots/          # Exported dashboard mockups
-│
-├── 📂 reports/                      # Automated analytical output artifacts
-│   ├── data_quality_report.csv      # Log of deduplication & outlier capping
-│   ├── sql_queries_results.txt      # Execution logs of the 15 queries
-│   ├── analysis_summary.xlsx        # Pivot-ready Excel spreadsheet
-│   └── business_recommendations.pdf # Executive PDF reporting deck
-│
-├── 📂 images/
-│   ├── 📂 visualizations/           # 12+ Analytical charts (PNG)
-│   └── 📂 dashboard_mockups/        # 4 Matplotlib-generated Power BI mockups (PNG)
-│
-├── 📄 requirements.txt              # Pip dependencies
-├── 📄 README.md                     # Main documentation page
-├── 📄 PROJECT_SUMMARY.md            # Comprehensive project overview
-└── 📄 .gitignore
 
-```
+│
+
+├── sql/
+
+│   ├── schema.sql                   ← Database schema, tables, and indexes
+
+│   ├── queries_15_analysis.sql      ← All 15 business SQL queries (commented)
+
+│   └── sample_data.sql              ← Sample INSERT statements for testing
+
+│
+
+├── scripts/
+
+│   ├── generate_data.py             ← Synthesizes 50K+ transaction records
+
+│   ├── data_cleaner.py              ← ETL cleaning pipeline (null handling, outlier capping)
+
+│   ├── feature_engineering.py       ← Computes CLV, RFM, ABC classification
+
+│   ├── run_queries.py               ← Initializes DB and executes all 15 SQL queries
+
+│   └── report_generator.py          ← Generates Excel and PDF reports from query results
+
+│
+
+├── data/
+
+│   ├── raw/                         ← transactions.csv, products.csv, customers.csv, inventory.csv
+
+│   └── processed/                   ← Cleaned, analysis-ready datasets
+
+│
+
+├── notebooks/                       ← 5 step-by-step Jupyter analysis notebooks
+
+├── dashboards/powerbi/              ← Power BI connection guide + DAX measures
+
+├── reports/                         ← Output: Excel summary, PDF report, SQL query logs
+
+└── images/                          ← Visualizations and dashboard mockups
